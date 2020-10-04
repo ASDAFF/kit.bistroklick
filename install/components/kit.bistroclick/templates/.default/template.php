@@ -29,7 +29,7 @@ if ($arResult['SHOW_FORM'] == 1 and $arResult['CHECK_SPAM'] != 1 and !$arResult[
             </div>
         <?
         } ?>
-        <div class="mlf_product">
+        <div class="kt_product">
             <div class="imager">
                 <div class="imageWp">
                     <?
@@ -83,7 +83,7 @@ if ($arResult['SHOW_FORM'] == 1 and $arResult['CHECK_SPAM'] != 1 and !$arResult[
             </div>
             <div class="naz"><?= $arResult["TOVAR"]["NAME"] ?></div>
         </div>
-        <div class="mlfform">
+        <div class="ktform">
             <?
             if ($arResult['OFFERS']) {
                 echo '<table class="offers">';
@@ -106,7 +106,7 @@ if ($arResult['SHOW_FORM'] == 1 and $arResult['CHECK_SPAM'] != 1 and !$arResult[
                     <?
                     if ($props) {
                         ?>
-                        <div class="mlfOfferProps"><?= $props ?></div>
+                        <div class="ktOfferProps"><?= $props ?></div>
                         <?
                     } ?>
                     <div class="price">
@@ -255,7 +255,7 @@ if ($arResult['SHOW_FORM'] == 1 and $arResult['CHECK_SPAM'] != 1 and !$arResult[
             if ($arResult['SHOW_KAPCHA'] == 1) { ?>
                 <?
                 $capCode = $GLOBALS["APPLICATION"]->CaptchaGetCode(); ?>
-                <div class="mlf_capcha">
+                <div class="kt_capcha">
                     <div class="label"><?= GetMessage("KIT_CAT_BK_KAPCHA_LABEL") ?><span>*</span>:</div>
                     <div class="fieldcp"><img
                                 src="/bitrix/tools/captcha.php?captcha_sid=<?= htmlspecialchars($capCode) ?>"
@@ -274,7 +274,7 @@ if ($arResult['SHOW_FORM'] == 1 and $arResult['CHECK_SPAM'] != 1 and !$arResult[
         echo bitrix_sessid_post('bistrclick_sessid');
         ?>
         <input type="hidden" name="name_bk" value="1"/>
-        <input type="submit" class="mlfsubmitbk" value="<?= GetMessage('KIT_CAT_BK_SEND_BUTTON') ?>"/>
+        <input type="submit" class="ktsubmitbk" value="<?= GetMessage('KIT_CAT_BK_SEND_BUTTON') ?>"/>
     </form>
     </body>
     </html>
